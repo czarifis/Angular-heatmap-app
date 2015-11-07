@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <!--<link href="lib/ionic/css/ionic.css" rel="stylesheet">-->
+    <!--<link href="css/style.css" rel="stylesheet">-->
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--<script src="cordova.js"></script>-->
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/heatmapCtrl.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="heatmapCtrl" >
+  <button ng-click=apply_diffs()>Click me!</button>
+    <table width='100%' cellspacing='5' class="rows">
+      <col width="30px" />
+      <tr ng-repeat="row in array_with_products">
+        <td> {{row}} </td>
+      </tr>
+    </table>
+
+  <table width='100%' cellspacing='5' class="column-table">
+    <col width="30px" />
+    <tr >
+      <td ng-repeat="column in array_with_zipcodes" class="columns"> {{column}} </td>
+    </tr>
+  </table>
+    <table width='100%' cellspacing='5' class="column-table rows">
+      <col width="30px" />
+      <tr ng-repeat="row in matrix_with_numbers track by $index">
+        <td ng-repeat="cell in row track by $index" >
+          <span ng-style="colorizeMe(cell)">
+            {{cell}}
+          </span>
+        </td>
+      </tr>
+    </table>
+
+    </body>
+</html>
