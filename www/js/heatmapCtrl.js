@@ -2,7 +2,7 @@
  * Created by czarifis on 11/6/15.
  */
 
-NUMBER_OF_PRODUCTS = 300;
+NUMBER_OF_PRODUCTS = 100;
 NUMBER_OF_ZIP_CODES = 1000;
 NUMBER_OF_DIFFS = 1;
 
