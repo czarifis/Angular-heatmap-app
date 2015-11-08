@@ -24,8 +24,8 @@
     <script src="js/app.js"></script>
     <script src="js/heatmapCtrl.js"></script>
   </head>
-  <body ng-app="starter" ng-controller="heatmapCtrl" >
-  <button ng-click=apply_diffs()>Click me!</button>
+  <body ng-app="heatmap" ng-controller="heatmapCtrl" >
+  <button class="button" ng-click="apply_diffs()">Click me!</button>
     <table width='100%' cellspacing='5' class="rows">
       <col width="30px" />
       <tr ng-repeat="row in array_with_products">

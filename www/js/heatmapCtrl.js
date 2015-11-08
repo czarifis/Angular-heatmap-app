@@ -7,7 +7,7 @@ NUMBER_OF_ZIP_CODES = 1000;
 NUMBER_OF_DIFFS = 1;
 
 
-angular.module('starter', []).controller('heatmapCtrl', function($scope) {
+angular.module('heatmapcontroller', []).controller('heatmapCtrl', function($scope) {
 
   $scope.matrix_with_numbers = [];
 
@@ -48,6 +48,7 @@ angular.module('starter', []).controller('heatmapCtrl', function($scope) {
   };
 
   $scope.apply_diffs = function () {
+
     for (j = 0 ; j<NUMBER_OF_DIFFS; j++) {
       if ($scope.matrix_with_numbers[0][j] < 50000) {
         $scope.matrix_with_numbers[0][j] = Number($scope.matrix_with_numbers[0][j]) + 50000;
